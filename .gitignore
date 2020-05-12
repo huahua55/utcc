@@ -1,0 +1,16 @@
+*.log
+/logs/*.log
+.DS_Store
+.buildpath
+._.DS_Store
+.project
+._SimpleSSDB.php
+._union.php
+.settings
+.idea
+*.swp
+*.less
+/nbproject/private/
+
+.env
+app/config/config.php

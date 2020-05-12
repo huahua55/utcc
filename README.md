@@ -1,2 +1,2 @@
-# utcc
-视频项目
+#Utcc系统介绍：
+UTCC系统全称是Upload Transcode Control Center，即上传转码控制中心。这个系统的主要功能是控制和管理视频从上传开始到可以播放的整个过程。
