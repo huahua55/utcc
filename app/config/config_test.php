@@ -13,8 +13,8 @@ return array(
     'db' => array(
         'host' => '127.0.0.1',
         'dbname' => 'video',
-        'username' => 'codeuser',
-        'password' => 'codeuser@2020',
+        'username' => 'uservide',
+        'password' => 'CHjduTY793CKLp',
         'charset' => 'utf8',
     ),
     'redis' => [
