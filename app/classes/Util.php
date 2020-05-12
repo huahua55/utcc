@@ -12,6 +12,9 @@ class Util
 			try{
                 $redis = new Redis();
                 $redis->connect($conf['host'], $conf['port'], 5);
+                if(isset($conf['pwd']) && !empty($conf['pwd'])){
+                    $redis->auth($conf['pwd']);
+                }
 			} catch (Exception $e){
 				Logger::error($e->getMessage());
 				_throw("redis error");
