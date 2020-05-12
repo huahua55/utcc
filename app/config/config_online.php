@@ -24,5 +24,5 @@ return array(
     ],
     'upload_path' => '/data/vod',
     'transcode_queue' => 'transcode_queue',
-    'cdn' => 'http://s1.mzuis.com'
+    'cdn' => 'https://sp1.rdxplus.cn'
 );
