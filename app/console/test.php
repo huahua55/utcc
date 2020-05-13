@@ -1,18 +1,22 @@
 <?php
+
+;
+print_r(new Redis());die;
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
-define('IPHP_PATH', '/data/lib/iphp');
+define('IPHP_PATH', '/Users/zongbozhu/Downloads/wwwroot/php/qdhy/sp1/iphp');
 define('MANAGE_CONFIG_PATH', APP_PATH . '/console/consumer_config.php');
 define('RUNNER_SCRIPT', APP_PATH . '/console/ConsumerRunner.php');
 require_once(IPHP_PATH . '/loader.php');
 App::init();
 
 
+die;
 $conf['host']= '127.0.0.1';
 $conf['port']= '30986';
 $conf['pwd']= 'SDjfk9he6ui';
-$redis = Util::redis();;
+$redis = Util::redis();
 $redis->connect($conf['host'], $conf['port'], 5);
 if(isset($conf['pwd']) && !empty($conf['pwd'])){
     $redis->auth($conf['pwd']);
