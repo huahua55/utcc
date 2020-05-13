@@ -1,10 +1,29 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 
+
 define('APP_PATH', dirname(__FILE__) . '/..');
+
 define('IPHP_PATH', '/data/lib/iphp');
 require_once(IPHP_PATH . '/loader.php');
+
+
+
+
+
 App::init();
+
+
+$conf['host']= '127.0.0.1';
+$conf['port']= '30986';
+$conf['pwd']= 'SDjfk9he6ui';
+$redis = new Redis();
+$redis->connect($conf['host'], $conf['port'], 5);
+if(isset($conf['pwd']) && !empty($conf['pwd'])){
+    $redis->auth($conf['pwd']);
+}
+
+print_r($redis);die;
 
 $args = [
     '/usr/bin/ffmpeg',
