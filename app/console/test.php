@@ -13,11 +13,10 @@ require_once(IPHP_PATH . '/loader.php');
 
 App::init();
 
-
 $conf['host']= '127.0.0.1';
 $conf['port']= '30986';
 $conf['pwd']= 'SDjfk9he6ui';
-$redis = new Redis();
+$redis = Util::redis();;
 $redis->connect($conf['host'], $conf['port'], 5);
 if(isset($conf['pwd']) && !empty($conf['pwd'])){
     $redis->auth($conf['pwd']);
