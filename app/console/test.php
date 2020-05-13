@@ -1,17 +1,13 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 
-
 define('APP_PATH', dirname(__FILE__) . '/..');
-
 define('IPHP_PATH', '/data/lib/iphp');
+define('MANAGE_CONFIG_PATH', APP_PATH . '/console/consumer_config.php');
+define('RUNNER_SCRIPT', APP_PATH . '/console/ConsumerRunner.php');
 require_once(IPHP_PATH . '/loader.php');
-
-
-
-
-
 App::init();
+
 
 $conf['host']= '127.0.0.1';
 $conf['port']= '30986';
