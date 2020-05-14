@@ -13,11 +13,11 @@ require_once(IPHP_PATH . '/loader.php');
 App::init();
 
 
-//$program = preg_split("/\s+/", 1);
-array_unshift($program, ' -v ');
-print_r($program);die;
-$a = pcntl_exec('/usr/local/php/bin/php', ' -v');
-
+//$program = preg_split("/\s+/", '-v');
+//array_unshift($program, ' -v ');
+$program[0] =' -v';
+$a = pcntl_exec('/usr/local/php/bin/php', $program);
+print_r($a);die;
 
 $conf['host']= '127.0.0.1';
 $conf['port']= '30986';
