@@ -171,8 +171,8 @@ class ConsumerManager {
 			$program = preg_split("/\s+/", $key);
 			array_unshift($program, RUNNER_SCRIPT);
 			Logger::debug('pcntl_exec program:' . Text::json_encode($program));
-//			pcntl_exec('/usr/bin/php', $program);
-			pcntl_exec('/usr/local/php/bin/php', $program);
+			pcntl_exec('/usr/bin/php', $program);
+//			pcntl_exec('/usr/local/php/bin/php', $program);
 		} else {
 		    // 父进程
 			$this->child_pid_map[$key][] = $pid;
