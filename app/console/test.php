@@ -4,7 +4,7 @@
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
-define('IPHP_PATH', '/Users/zongbozhu/Downloads/wwwroot/php/qdhy/sp1/iphp');
+define('IPHP_PATH', '/data/lib/iphp');
 define('MANAGE_CONFIG_PATH', APP_PATH . '/console/consumer_config.php');
 define('RUNNER_SCRIPT', APP_PATH . '/console/ConsumerRunner.php');
 require_once(IPHP_PATH . '/loader.php');
