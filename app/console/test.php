@@ -2,7 +2,6 @@
 
 
 
-
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
@@ -13,22 +12,6 @@ require_once(IPHP_PATH . '/loader.php');
 App::init();
 
 
-//$program = preg_split("/\s+/", '-v');
-//array_unshift($program, ' -v ');
-$program[0] =' -v';
-$a = pcntl_exec('/usr/local/php/bin/php', $program);
-print_r($a);die;
-
-$conf['host']= '127.0.0.1';
-$conf['port']= '30986';
-$conf['pwd']= 'SDjfk9he6ui';
-$redis = Util::redis();
-$redis->connect($conf['host'], $conf['port'], 5);
-if(isset($conf['pwd']) && !empty($conf['pwd'])){
-    $redis->auth($conf['pwd']);
-}
-
-print_r($redis);die;
 
 $args = [
     '/usr/bin/ffmpeg',
