@@ -1,10 +1,8 @@
 <?php
 
 
-$a = pcntl_exec('/usr/local/php/bin/php', ' -v');
 
-print_r($a);die;
-print_r(1);die;
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
@@ -14,6 +12,11 @@ define('RUNNER_SCRIPT', APP_PATH . '/console/ConsumerRunner.php');
 require_once(IPHP_PATH . '/loader.php');
 App::init();
 
+
+$program = preg_split("/\s+/", 1);
+array_unshift($program, RUNNER_SCRIPT);
+print_r($program);die;
+$a = pcntl_exec('/usr/local/php/bin/php', ' -v');
 
 
 $conf['host']= '127.0.0.1';
