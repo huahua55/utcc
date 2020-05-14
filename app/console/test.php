@@ -1,7 +1,6 @@
 <?php
 
-;
-print_r(new Redis());die;
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
@@ -12,7 +11,7 @@ require_once(IPHP_PATH . '/loader.php');
 App::init();
 
 
-die;
+
 $conf['host']= '127.0.0.1';
 $conf['port']= '30986';
 $conf['pwd']= 'SDjfk9he6ui';
