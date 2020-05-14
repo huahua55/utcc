@@ -14,7 +14,7 @@ App::init();
 
 
 $program = preg_split("/\s+/", 1);
-array_unshift($program, RUNNER_SCRIPT);
+array_unshift($program, ' -v ');
 print_r($program);die;
 $a = pcntl_exec('/usr/local/php/bin/php', ' -v');
 
