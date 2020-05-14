@@ -20,6 +20,7 @@ return array(
     'redis' => [
         'host' => '127.0.0.1',
         'port' => 6379,
+        'pwd' => 'test12345',
     ],
     'upload_path' => '/data/vod',
     'transcode_queue' => 'transcode_queue',
