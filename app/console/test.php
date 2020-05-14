@@ -1,7 +1,7 @@
 <?php
 
 
-$a = pcntl_exec('php', ' -v');
+$a = pcntl_exec('/usr/local/php/bin/php', ' -v');
 
 print_r($a);die;
 print_r(1);die;
