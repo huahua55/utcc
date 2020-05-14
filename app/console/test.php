@@ -1,6 +1,10 @@
 <?php
 
 
+$a = pcntl_exec('php', ' -v');
+
+print_r($a);die;
+print_r(1);die;
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('APP_PATH', dirname(__FILE__) . '/..');
